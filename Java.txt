@@ -1,0 +1,10 @@
+Install Java on Ubuntu
+
+$ sudo apt install openjdk-8-jdk
+OR
+$ sudo apt install openjdk-11-jdk
+OR
+$ sudo apt install openjdk-13-jdk
+OR
+$ sudo apt install openjdk-14-jdk
+
