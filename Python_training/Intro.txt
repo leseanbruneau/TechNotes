@@ -1,0 +1,44 @@
+
+
+https://www.python.org/downloads/
+
+https://jupyter.org/install
+
+pip install jupyterlab
+
+sudo apt install python3-pip
+
+sudo snap install jupyter
+
+in Jupyter Notebook
+
+Change cell from Code to Markdown
+  Click in cell and type letters s m
+
+Windows - 
+Anaconda installation
+
+Run Anaconda prompt from start menu
+cd to working directory
+
+Run following command from Anaconda prompt
+jupyter notebook
+
+.ipynb - Jupyter Notebook file extension
+
+New | Python3 notebook
+
+Command
+!python --version
+
+  Shift-Enter to execute command
+
+  ! -> means "shell command"
+
+question = "What did you have for lunch?"
+answer = input()
+
+print(question,answer)
+
+
+

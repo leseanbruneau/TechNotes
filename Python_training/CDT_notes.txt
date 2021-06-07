@@ -1,0 +1,232 @@
+CDT - Complex Data Types in Python - Notes
+
+
+clist.append('add element') - appends element to list
+
+clist.insert(5, 'element') - 5 is the index number where to insert
+
+clist.extend([_ , _ , _ ]) - List to combine with another list
+
+clist.index('element') -> Returns index # of element in list
+
+clist.pop() -> Last element removed from the list
+
+clist.count('element') - returns # of elements that are in list clist
+
+clist.clear() - removes all elements from clist
+
+clist.copy() - copies list (Deep Copy) - all elements are copied to a different memory location
+
+del clist - Deletes clist from memory
+
+newList - clist -> shallow copy from clist
+
+clist.remove('remove')
+
+max(clist)  -> maximum element value
+
+sorted_list = sorted(clist) 
+
+all([0]) -> False (all elements are False) 
+
+all([1]) -> True (all elements are True)
+
+any([1]) -> True (one or more elements is True)
+
+clist[-2] -> second to last element in list
+
+List Slicing
+clist[0:4] -> First four elements of list
+
+clist[0:4] -> Deep Copy 
+    if end index is > len(clist) -> all elements are copied
+
+clist[:4] - Python begins at the beginning of the list
+clist[0:] - Python goes to the end of the list
+
+clist[0:-4]
+clist[-4:-1] - valid
+clist[start_index: end_index: stop_size]
+
+clist[::-1] - reverse order of list
+
+Strings
+x = "World"
+    x[0] -> returns W
+
+Cannot assign individual character to string
+    x[0] = 'B' ### Invalid statement
+
+place = 'New York City'
+
+place[-4]  ### returns 'City'
+
+place.startswith('n')
+place.endswidth('n')
+
+place.count('y')  ### count number of character 'y' in string
+
+place.lower() / place.upper() 
+
+place.find('c')  ### index position of character
+place.find('York')   ### returns -1 if not found
+
+place.split('k')  ### returns ['New Yor','City']
+
+place.split(' ')  ### returns ['New','York','City']
+
+','.join(place)  ### returns 'New,York,City'
+
+my_string.isupper()  ### returns true if all characters are upper case
+
+tuple - Complex Data Type (Python class)
+
+Dictionary - mapping of key-value pairs
+Record - a single key-value mapping
+
+dict_obj[key] ### valid syntax
+
+dict_obj[value]  ### invalid syntax
+
+keys can be integers; keys need to be unique
+
+dict_obj.keys() - returns list of all keys
+
+"key_name" in dict_obj.keys() ### returns True, if key_name is in dict_obj dictionary
+
+dict_obj.values()
+
+dict_obj[new_key_name] = "new_key_value"  ### adds a new key (new_key_name) with value (new_key_value) 
+
+len(dict_obj) ### returns how many key-value records are in the dictionary (dict_obj)
+
+len(dict_obj.keys())  /  len(dict_obj.values())
+
+sorted(dict_obj)  ### returns a sorted list of keys in ascending order
+
+sorted(dict_obj, reverse = True)  ### returns a sorted list of keys in decending order
+
+dict_obj.items()
+
+copy_dict_obj = dict_obj.copy()  ###  Deep Copy of dict_obj to copy_dict_obj
+
+dict_obj.pop('key_name')  ### remove key (key_name) from dictionary
+
+new_dict_age and dict_age
+
+dict_age.update(new_dict_age)  ### new key-value are added to dict_age; existing key-value are updated from new_dict_age into dict_age
+
+dict_age.clear()   ### removes all elements from dict_age dictionary, leave dict_age in memory
+del dict_age  ### remove dict_age dictionary from memory, will return error if any future reference to dict_age
+
+set -> collection of elements, contains no duplicates, no intrinsic order
+empty_set = set()
+
+sets can only contain immutable elements
+
+set_1.add(9)   ###  adds 9 to set_1
+
+len(set_1) / max(set_1)
+
+set_1.discard('name')  ###  Python does nothing if element does not exist
+set_1.remove('name')  ###  Python will throw error if element does not exist
+
+set_1.clear()
+set_1.union(set_2)
+set_1.union(set_2, set_3)
+
+set_1.intersection(set_2)
+set_1.difference(set_2)
+    diff_set = set_1.difference(set_2)
+
+set_1.intersection_update(set_2)
+set_1.difference_update(set_2)
+
+{10,20}.issubset({10,20,30})  ### returns True
+{10,20,30}.issuperset({10,20})  ### returns True
+
+### convert a list object into a dictionary object
+dict_obj = dict(list_obj)
+
+Summary of Dictionary, Sets, and List classes
+
+Dictionary
+    - Unordered collection of key-value pairs
+    - key is associated with a value
+    - Each key is unique
+    - Values can be duplicates
+    - Values can be simple or complex data type
+    - Values are mutable - keys can be added, values can be updated
+
+Sets    
+    - Unordered collections of unique elements
+    - Adding duplicates will add element only once
+    - Cannot contain mutable elements (lists or dictionaries within sets)
+
+List
+    - Ordered collection
+    - Can contain duplicates
+    - Can contain nested complex data types 
+    - Can be looked up by index 
+
+
+Copying Strings
+    Python strings are immutable
+
+import copy  ### built in Python libraries 
+
+second_str = copy.copy(first_str)  ### Deep copy - first_str and second_str will have separate memory locations
+
+second_str = copy.deepcopy(first_str)  ### no difference between copy.copy() and copy.deepcopy() for strings
+
+ListShallowCopy
+
+names = ["apple","banana","carrot"]
+new_names = names  ###  shallow copy of a list, both variables refer to the same list in memory
+
+new_names = copy.copy(names)   ### creates a deep copy of the outer list, and a shallow copy of the inner list 
+    Changes to the outer list will not be reflected in copied list
+
+new_names = copy.deepcopy(names)  ### 
+
+copy.copy() and copy.deepcopy()
+    - Produce deep copies of non-nested lists
+
+old_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+new_list = copy.deepcopy(old_list)
+
+old_list[1][2]
+6
+
+old_list[1][2] = 'Six'
+
+Old list:  [1, 2, 3], [4, 5, 'Six'], [7, 8, 9]
+New list:  [1, 2, 3], [4, 5, 6], [7, 8, 9]
+
+new_tuple = old_tuple
+    Both variables refer to the same tuple in memory
+
+Complex Data Types will always default to shallow copy
+
+
+Dictionary
+    new_dict = old_dict  ### shallow copy of dictionary old_dict
+    copy.copy(dict) ###  Produces a deep copy of the outer dictionary but a shallow copy of the nested types
+    new_months = months.copy()  ###  For a simple dictionary this creates a deep copy of the dictionary
+    employees_copy = copy.deepcopy(employees)
+
+Set 
+    set_2 = set_1 ### both variables refer to same place in memory
+
+elements of set cannot be accessed using index value.  (unordered, intrinsic list)
+
+new_teacher_set = copy.deepcopy(old_teacher_set)
+
+
+
+
+
+
+
+
+
