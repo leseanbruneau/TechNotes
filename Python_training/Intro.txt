@@ -40,5 +40,11 @@ answer = input()
 
 print(question,answer)
 
+OR 
+answer = input("What did you have for lunch?")
+print(answer)
+
+
+
 
 

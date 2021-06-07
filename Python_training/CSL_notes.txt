@@ -1,3 +1,59 @@
 CSL - Conditional Statements & Loops in Python - Notes
 
+### convert list to tuple
+my_tuple = tuple(my_list)
+
+
+values = input("Enter some comma separated numbers: ")
+
+list_value = values.split(",")
+tuple_value = tuple(list_value)
+
+list_words = input("Enter some comma separated words : ")
+
+words = list_words.split(",")
+
+new_list_words = sorted(words)
+
+print(new_list_words)
+
+### Remove duplicate words
+
+sentence = input("Enter some white-separated words : ")
+
+words = sentence.split(" ")
+
+set_of_words = set(words)
+
+sorted_set_of_words = sorted(set_of_words)
+
+print(" ".join(sorted_set_of_words))
+
+Python - check if string is a palindrome
+
+change the order of precedence
+
+10 - 4 * 2 = 2
+(10 - 4) * 2 = 12
+
+Membership Operators
+.in 
+    if "red" in colors:
+        print("this color is present in list")
+    
+    if "purple" not in colors:
+        print("this color not in list")
+
+Convert a String to a List 
+
+my_string = "hello"
+
+my_list = list(my_string)
+
+print(my_list)
+
+
+
+
+
 
