@@ -52,6 +52,48 @@ my_list = list(my_string)
 
 print(my_list)
 
+my_range = range(5)  ### same as range(0,5) 0,1,2,3,4
+
+my_range
+
+tuple(my_range) 
+
+list(my_range)
+
+list(range(5,10))  ### returns [5, 6, 7, 8, 9]
+
+list(range(-5,5)) ### returns [-5,-4,-3,-2,-1,0,1,2,3,4]
+
+for i in range("c","y"):   ### Error
+
+for i in range(6):  ###  loop with six iterations
+
+for _ in range(6):  ### use _ if you don't need loop index counter
+
+x = range(5)
+
+for i in reversed(x):
+    print(x)
+
+list(range(5,10,1))  ### 5 - minumum value; 10 - upper bound; 1 - gap/interval
+
+tuple(range(5,-10,-2))   
+
+else (for loop) - runs once after for loop completes
+else (for loop) - statement(s) are not executed if break statement is executed in for loop
+
+multiples_27 = [i for i in range(300) if i % 27 == 0]
+
+print(multiples_27)
+
+stationery = ["Pen", "Marker", "Ink"]
+colors = ["Red", "Blue", "Green"]
+
+combined = [(i, j) for j in stationery for i in colors]
+
+combined
+
+
 
 
 

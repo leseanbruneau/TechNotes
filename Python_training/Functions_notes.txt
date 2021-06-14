@@ -1,4 +1,27 @@
 F - Functions in Python - Notes
 
 
+def my_introduction():
+    print("My name is LeSean")
+    print("I live in Eagan")
+    print("I am here")
+
+### invoke function 
+my_introduction()
+
+### function names cannot begin with a number
+### following is an error 
+def 123calc_function():
+    print("Hello")
+
+None is a  special value in Python - indicates no value or nothing
+    type(r) => NoneType
+
+Default - all functions return None if no return is specified
+
+
+
+
+
+
 
